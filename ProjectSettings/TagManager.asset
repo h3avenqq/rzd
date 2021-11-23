@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Person
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - collide
   - Water
   - UI
   - 
