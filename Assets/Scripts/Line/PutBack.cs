@@ -6,5 +6,4 @@ public class PutBack : MonoBehaviour
     {
         transform.position += new Vector3(30, 0, 0);
     }
-
 }
