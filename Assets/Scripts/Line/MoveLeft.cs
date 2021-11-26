@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    public float waitTimer = 1;
+    public float waitTimer = 0.5f;
     public float speed = 10f;
 
     void Update()

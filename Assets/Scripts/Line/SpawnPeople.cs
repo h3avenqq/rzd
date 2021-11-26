@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpawnPeople : MonoBehaviour
 {
     public GameObject person;
-    public int peopleAmount = 6;
+    public int peopleAmount = 3;
 
     float y = 6.5f;
     private float z;
