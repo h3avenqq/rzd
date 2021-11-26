@@ -9,8 +9,8 @@ public class GameControl : MonoBehaviour
 {
     public float timerMax = 5;//надо будет задавать в старте исходя из сложности этапа
     private float timer;
-    private float xPos; //142 214
-    private float zPos; //180 -12
+    private float xPos; //142 214 //155 216
+    private float zPos; //180 -12 //143 20
    
     private static int countPers = 10;
 
@@ -26,8 +26,8 @@ public class GameControl : MonoBehaviour
         timer = timerMax;
         for (int i = 0; i < countPers; i++)
         {
-            xPos = Random.Range(142f, 214f);
-            zPos = Random.Range(-12f, 180f);
+            xPos = Random.Range(155f, 214f);
+            zPos = Random.Range(20f, 143f);
             allPers[i] = Instantiate(pers, new Vector3(xPos, 16, zPos), Quaternion.identity);
         }
     }
@@ -48,22 +48,12 @@ public class GameControl : MonoBehaviour
         if (!exist)
         {
             Time.timeScale = 0;
-            Debug.Log("WIN");
+            // Debug.Log("WIN");
         }
         else if (timer<=0)
         {
             Time.timeScale = 0;
-            Debug.Log("LOSE");
+            // Debug.Log("LOSE");
         }
     }
 }
-// if (p.GetComponent<Person>().isCall)
-// {
-//     //win
-//     Debug.Log("WIN");
-// }
-// else if (timer <= 0)
-// {
-//     Debug.Log("LOSE");
-//     //lose
-// }

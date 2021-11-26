@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Phone : MonoBehaviour
 {
+
     public void Kill()
     {
         Destroy(this.gameObject);
