@@ -34,8 +34,8 @@ public class SpawnPeople : MonoBehaviour
                     break;
             }
 
-            Vector3 pos = new Vector3(x, y, z);
-            GameObject gm = Instantiate(person, pos, Quaternion.identity);
+            Vector3 pos = new Vector3(x, -6.5f, z);
+            GameObject gm = Instantiate(person, pos, Quaternion.Euler(0,-90f,0));
         }
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Collections;
 
 public class GameController : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         timerBar.gameObject.SetActive(true);
-        loseScreen.gameObject.SetActive(false);
+        //loseScreen.gameObject.SetActive(false);
     }
 
     void Update()
@@ -28,7 +29,8 @@ public class GameController : MonoBehaviour
     {
         if (isLost == 1)
         {
-            loseScreen.gameObject.SetActive(true);
+            //loseScreen.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -37,6 +39,7 @@ public class GameController : MonoBehaviour
         if ((isLost == 0) && (timer <= 0))
         {
             Debug.Log("Win!!!");
+            Time.timeScale = 0;
             // Next game
         }
     }

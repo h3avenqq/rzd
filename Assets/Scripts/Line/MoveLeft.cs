@@ -10,7 +10,7 @@ public class MoveLeft : MonoBehaviour
         waitTimer -= Time.deltaTime;
         if (waitTimer <= 0)
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
     }
 }
