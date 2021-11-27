@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef39fd61bd035a04a978757f6d39d8af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5315ffae1d519844abf15625ad0bcdb4, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9b2dcbdd7bd6e4d8ef51bb554c1b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMax: 100
+  timerMax: 10
   pers: {fileID: 921397549854107914, guid: 34ce479fd78cb4e46b7fd1a13e0958f2, type: 3}
   timeBar: {fileID: 1077762052}
 --- !u!4 &1659383998
