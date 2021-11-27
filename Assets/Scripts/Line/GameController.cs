@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -36,8 +37,8 @@ public class GameController : MonoBehaviour
     {
         if ((isLost == 0) && (timer <= 0))
         {
-            Debug.Log("Win!!!");
-            // Next game
+            // Debug.Log("Win!!!");
+            SceneManager.LoadScene(NextGame());
         }
     }
 
@@ -47,4 +48,17 @@ public class GameController : MonoBehaviour
         timerBar.fillAmount = timer / timerMax;
     }
     
+    int NextGame()
+    { 
+        int gameNumber = Random.Range(2, 3);
+        switch (gameNumber)
+        {
+            case 2:
+                return 2;
+            case 3:
+                return 3;
+            default:
+                return 0;
+        }
+    }
 }

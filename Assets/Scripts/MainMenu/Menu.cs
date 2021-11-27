@@ -14,11 +14,14 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
+    // у меня индексы сцен: 0-MainMenu, 1-Line, 2-RedLight, 3 для calls
     int RandomGame()
     { 
-        int LineReplayGameNumber = Random.Range(2, 3);
-        switch (LineReplayGameNumber)
+        int gameNumber = Random.Range(1, 3);
+        switch (gameNumber)
         {
+            case 1:
+                return 1;
             case 2:
                 return 2;
             case 3:
@@ -27,4 +30,6 @@ public class Menu : MonoBehaviour
                 return 0;
         }
     }
+    
+    
 }
