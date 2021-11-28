@@ -1814,7 +1814,7 @@ GameObject:
   - component: {fileID: 921397549854107916}
   - component: {fileID: 921397549854107919}
   m_Layer: 0
-  m_Name: RedMan
+  m_Name: RedManCalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1894,10 +1894,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCall: 0
-  xOffset: -2.2
-  yOffset: 20
+  xOffset: 2.5
+  yOffset: 17
   zOffset: 0
-  phonePref: {fileID: 3585002979565276615, guid: 5aa6bc26b4994614ebea425d34825f3b, type: 3}
+  phonePref: {fileID: 1513442650817267304, guid: a78c21a75b08f6748a16635278526ee0, type: 3}
   phone: {fileID: 0}
 --- !u!195 &921397549854107919
 NavMeshAgent:

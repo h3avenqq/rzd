@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        cars.Add(Instantiate(pref, new Vector3(-7.41f, 1.8f, -9.8f), Quaternion.identity ));
+        cars.Add(Instantiate(pref, new Vector3(-7.41f, 0f, -10f), Quaternion.identity ));
     }
 
     private void Update()
@@ -33,14 +33,14 @@ public class Spawner : MonoBehaviour
             time = 1;
             if (cars.Count<2)
             {
-                cars.Add(Instantiate(pref, new Vector3(-7.41f, 1.8f, -9.8f), Quaternion.identity ));
+                cars.Add(Instantiate(pref, new Vector3(-7.41f, 0f, -10f), Quaternion.identity ));
             }
         }
     }
 
     public void SpawnEnd()
     {
-        cars.Add(Instantiate(pref, new Vector3(-7.41f, 1.8f, -9.8f), Quaternion.identity ));
+        cars.Add(Instantiate(pref, new Vector3(-7.41f, 0f, -10f), Quaternion.identity ));
 
     }
 

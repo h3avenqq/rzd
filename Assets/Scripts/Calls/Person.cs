@@ -23,7 +23,7 @@ public class Person : MonoBehaviour
    {
       par = new Vector3(this.gameObject.transform.position.x + xOffset ,this.gameObject.transform.position.y+yOffset,
          this.gameObject.transform.position.z + zOffset);
-      if (Random.Range(1, 10) > 3)
+      if (Random.Range(1, 10) >= 3)
       {
          CreatePhone();
          isCall = true;
@@ -41,6 +41,6 @@ public class Person : MonoBehaviour
 
    private void CreatePhone()
    {
-      phone = Instantiate(phonePref,par,Quaternion.Euler(0,90,0),this.gameObject.transform);
+      phone = Instantiate(phonePref,par,Quaternion.Euler(0,0,0),this.gameObject.transform);
    }
 }
