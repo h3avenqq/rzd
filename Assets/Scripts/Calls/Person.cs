@@ -41,6 +41,6 @@ public class Person : MonoBehaviour
 
    private void CreatePhone()
    {
-      phone = Instantiate(phonePref,par,Quaternion.Euler(0,0,0),this.gameObject.transform);
+      phone = Instantiate(phonePref,par,Quaternion.Euler(0,90,0),this.gameObject.transform);
    }
 }
