@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         timerBar.gameObject.SetActive(true);
-        //loseScreen.gameObject.SetActive(false);
+        loseScreen.gameObject.SetActive(false);
     }
 
     void Update()
@@ -29,14 +29,19 @@ public class GameController : MonoBehaviour
     {
         if (isLost == 1)
         {
-            //loseScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
+            loseScreen.gameObject.SetActive(true);
         }
     }
 
     void Win()
     {
-        
+        if ((isLost == 0) && (timer <= 0))
+        {
+            // Debug.Log("Win!!!");
+            Time.timeScale = 0;
+            SceneManager.LoadScene(NextGame());
+        }
     }
 
     void TimerDecrease()
@@ -45,4 +50,17 @@ public class GameController : MonoBehaviour
         timerBar.fillAmount = timer / timerMax;
     }
     
+    int NextGame()
+    { 
+        int gameNumber = Random.Range(2, 3);
+        switch (gameNumber)
+        {
+            case 2:
+                return 2;
+            case 3:
+                return 3;
+            default:
+                return 0;
+        }
+    }
 }
