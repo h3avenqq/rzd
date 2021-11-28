@@ -13,8 +13,5 @@ public class MenuSc : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void OnMouseUpAsButton()
-    {
-        SceneManager.LoadScene("Scenes/Line");
-    }
+    
 }
