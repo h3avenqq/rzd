@@ -36,12 +36,7 @@ public class GameController : MonoBehaviour
 
     void Win()
     {
-        if ((isLost == 0) && (timer <= 0))
-        {
-            Debug.Log("Win!!!");
-            Time.timeScale = 0;
-            // Next game
-        }
+        
     }
 
     void TimerDecrease()

@@ -48,12 +48,10 @@ public class GameControl : MonoBehaviour
         if (!exist)
         {
             Time.timeScale = 0;
-            // Debug.Log("WIN");
         }
         else if (timer<=0)
         {
             Time.timeScale = 0;
-            // Debug.Log("LOSE");
         }
     }
 }
