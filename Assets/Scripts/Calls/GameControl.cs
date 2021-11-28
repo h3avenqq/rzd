@@ -23,6 +23,7 @@ public class GameControl : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         timer = timerMax;
         for (int i = 0; i < countPers; i++)
         {
@@ -48,10 +49,12 @@ public class GameControl : MonoBehaviour
         if (!exist)
         {
             Time.timeScale = 0;
+            RandomLevel.Menu();
         }
         else if (timer<=0)
         {
             Time.timeScale = 0;
+            RandomLevel.Menu();
         }
     }
 }

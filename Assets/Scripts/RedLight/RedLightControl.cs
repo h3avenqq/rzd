@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RedLightControl : MonoBehaviour
 {
@@ -12,16 +13,29 @@ public class RedLightControl : MonoBehaviour
     public Material Green;
 
     private float lightTimer = 3;
+    public float timer;
+    public float timerMax = 10;
+
+    public Image timeBar;
 
     public bool isRed = false;
 
     private void Start()
     {
+        Time.timeScale = 1;
+        timer = timerMax;
         light.GetComponent<Renderer>().material = Green;
     }
 
     private void Update()
     {
+        timer -= Time.deltaTime;
+        timeBar.fillAmount = timer / timerMax;
+        if (timer <= 0)
+        {
+            Time.timeScale = 0;
+            RandomLevel.Menu();
+        }
         SwitchLight();
     }
 

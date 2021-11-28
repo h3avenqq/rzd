@@ -14,8 +14,9 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         timerBar.gameObject.SetActive(true);
-        loseScreen.gameObject.SetActive(false);
+        // loseScreen.gameObject.SetActive(false);
     }
 
     void Update()
@@ -30,7 +31,8 @@ public class GameController : MonoBehaviour
         if (isLost == 1)
         {
             Time.timeScale = 0;
-            loseScreen.gameObject.SetActive(true);
+            RandomLevel.Menu();
+            // loseScreen.gameObject.SetActive(true);
         }
     }
 
@@ -38,9 +40,9 @@ public class GameController : MonoBehaviour
     {
         if ((isLost == 0) && (timer <= 0))
         {
-            // Debug.Log("Win!!!");
             Time.timeScale = 0;
-            SceneManager.LoadScene(NextGame());
+            RandomLevel.Menu();
+            // SceneManager.LoadScene(NextGame());
         }
     }
 
@@ -50,17 +52,4 @@ public class GameController : MonoBehaviour
         timerBar.fillAmount = timer / timerMax;
     }
     
-    int NextGame()
-    { 
-        int gameNumber = Random.Range(2, 3);
-        switch (gameNumber)
-        {
-            case 2:
-                return 2;
-            case 3:
-                return 3;
-            default:
-                return 0;
-        }
-    }
 }
